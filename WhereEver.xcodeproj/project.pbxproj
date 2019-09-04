@@ -13,6 +13,8 @@
 		50B91E5D231FE53D00DB0078 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50B91E5B231FE53D00DB0078 /* Main.storyboard */; };
 		50B91E5F231FE53E00DB0078 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50B91E5E231FE53E00DB0078 /* Assets.xcassets */; };
 		50B91E62231FE53E00DB0078 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50B91E60231FE53E00DB0078 /* LaunchScreen.storyboard */; };
+		50B91E6B231FE66000DB0078 /* harrypotter.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 50B91E69231FE65E00DB0078 /* harrypotter.mp3 */; };
+		50B91E6C231FE66000DB0078 /* harrypotter.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 50B91E6A231FE66000DB0078 /* harrypotter.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		50B91E5E231FE53E00DB0078 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		50B91E61231FE53E00DB0078 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		50B91E63231FE53E00DB0078 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		50B91E69231FE65E00DB0078 /* harrypotter.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = harrypotter.mp3; sourceTree = "<group>"; };
+		50B91E6A231FE66000DB0078 /* harrypotter.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = harrypotter.mp4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,8 @@
 		50B91E54231FE53D00DB0078 /* WhereEver */ = {
 			isa = PBXGroup;
 			children = (
+				50B91E69231FE65E00DB0078 /* harrypotter.mp3 */,
+				50B91E6A231FE66000DB0078 /* harrypotter.mp4 */,
 				50B91E55231FE53D00DB0078 /* AppDelegate.swift */,
 				50B91E57231FE53D00DB0078 /* art.scnassets */,
 				50B91E59231FE53D00DB0078 /* ViewController.swift */,
@@ -127,7 +133,9 @@
 			files = (
 				50B91E58231FE53D00DB0078 /* art.scnassets in Resources */,
 				50B91E62231FE53E00DB0078 /* LaunchScreen.storyboard in Resources */,
+				50B91E6C231FE66000DB0078 /* harrypotter.mp4 in Resources */,
 				50B91E5F231FE53E00DB0078 /* Assets.xcassets in Resources */,
+				50B91E6B231FE66000DB0078 /* harrypotter.mp3 in Resources */,
 				50B91E5D231FE53D00DB0078 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
