@@ -9,8 +9,9 @@
 import UIKit
 import SceneKit
 import ARKit
+import MessageUI
 
-class ViewController: UIViewController, ARSCNViewDelegate {
+class ViewController: UIViewController, ARSCNViewDelegate, MFMailComposeViewControllerDelegate {
     
     @IBOutlet var sceneView: ARSCNView!
     
@@ -72,7 +73,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         // imageAnchor is the harry potter image on the physical newspaper
         if let imageAnchor = anchor as? ARImageAnchor {
             
-            let videoNode = SKVideoNode(fileNamed: "harrypotter.mp4")
+            let videoNode = SKVideoNode(fileNamed: "HubSpot-AboutUs.mp4")
             
             videoNode.play()
             
@@ -117,4 +118,34 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         }
         
     }
+    
+    
+    @IBAction func emailButtonTapped(_ sender: UIButton) {
+    
+        if MFMailComposeViewController.canSendMail() {
+            let mail = MFMailComposeViewController()
+            mail.mailComposeDelegate = self
+            mail.setToRecipients(["newdeveloper1@maildrop.cc"])
+            mail.setSubject("Would love to learn more")
+            mail.setMessageBody("<p>You're so awesome! Let's set up a meeting.</p>", isHTML: true)
+            
+            present(mail, animated: true)
+            
+        } else {
+            print("couldn't send email")
+            
+            // show failure alert
+            let alert = UIAlertController(title: "email error alert", message: "Email was not sent. Please try again.", preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "default action"), style:. default, handler: { _ in NSLog("The \"OK\" alert occurred.") }))
+            
+            self.present(alert, animated: true, completion: nil)
+        }
+        
+    }
+    
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true, completion: nil)
+    }
+    
 }
