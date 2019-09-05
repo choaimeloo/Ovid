@@ -111,21 +111,30 @@ class ViewController: UIViewController, ARSCNViewDelegate, MFMailComposeViewCont
         
     }
     
-    @IBAction func goToLandingPage(_ sender: UIButton) {
-        
+    
+    @IBAction func moreButtonTapped(_ sender: UIBarButtonItem) {
         if let url = NSURL(string: "http://www.hubspot.com") {
             UIApplication.shared.openURL(url as URL)
         }
+    }
+    
+    
+    @IBAction func shareButtonTapped(_ sender: UIBarButtonItem) {
+        let items: [Any] = ["You should watch this video:", URL(string: "https://hubspot.hubs.vidyard.com/watch/Jgw4cuRZkXyuxZ3hQnoMAv?")!]
+            
+        let ac = UIActivityViewController(activityItems: items, applicationActivities: nil)
+        
+        present(ac, animated: true)
         
     }
     
     
-    @IBAction func emailButtonTapped(_ sender: UIButton) {
-    
+    @IBAction func contactButtonTapped(_ sender: UIBarButtonItem) {
+        
         if MFMailComposeViewController.canSendMail() {
             let mail = MFMailComposeViewController()
             mail.mailComposeDelegate = self
-            mail.setToRecipients(["newdeveloper1@maildrop.cc"])
+            mail.setToRecipients(["manon@madkings.com"])
             mail.setSubject("Would love to learn more")
             mail.setMessageBody("<p>You're so awesome! Let's set up a meeting.</p>", isHTML: true)
             
@@ -141,8 +150,9 @@ class ViewController: UIViewController, ARSCNViewDelegate, MFMailComposeViewCont
             
             self.present(alert, animated: true, completion: nil)
         }
-        
     }
+    
+    
     
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         controller.dismiss(animated: true, completion: nil)
