@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		504EFCF7232102F700635629 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 504EFCF6232102F700635629 /* Default-568h@2x.png */; };
 		504EFCF923210E5F00635629 /* HubSpot-AboutUs.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 504EFCF823210E5F00635629 /* HubSpot-AboutUs.mp4 */; };
 		504EFCFB23210E7C00635629 /* HubSpot-AboutUs.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 504EFCFA23210E7C00635629 /* HubSpot-AboutUs.mp3 */; };
 		50B91E56231FE53D00DB0078 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B91E55231FE53D00DB0078 /* AppDelegate.swift */; };
@@ -21,7 +20,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		504EFCF6232102F700635629 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		504EFCF823210E5F00635629 /* HubSpot-AboutUs.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HubSpot-AboutUs.mp4"; sourceTree = "<group>"; };
 		504EFCFA23210E7C00635629 /* HubSpot-AboutUs.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "HubSpot-AboutUs.mp3"; sourceTree = "<group>"; };
 		50B91E52231FE53D00DB0078 /* Ovid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ovid.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -50,7 +48,6 @@
 		50B91E49231FE53D00DB0078 = {
 			isa = PBXGroup;
 			children = (
-				504EFCF6232102F700635629 /* Default-568h@2x.png */,
 				50B91E54231FE53D00DB0078 /* Ovid */,
 				50B91E53231FE53D00DB0078 /* Products */,
 			);
@@ -147,7 +144,6 @@
 				50B91E5F231FE53E00DB0078 /* Assets.xcassets in Resources */,
 				504EFCFB23210E7C00635629 /* HubSpot-AboutUs.mp3 in Resources */,
 				50B91E6B231FE66000DB0078 /* harrypotter.mp3 in Resources */,
-				504EFCF7232102F700635629 /* Default-568h@2x.png in Resources */,
 				50B91E5D231FE53D00DB0078 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -313,10 +309,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.jancho.ovid;
+				PRODUCT_BUNDLE_IDENTIFIER = com.janwcho.ovid;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -331,10 +327,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.jancho.ovid;
+				PRODUCT_BUNDLE_IDENTIFIER = com.janwcho.ovid;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

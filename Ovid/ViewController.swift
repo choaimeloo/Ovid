@@ -8,10 +8,11 @@
 
 import UIKit
 import SceneKit
+import SpriteKit
 import ARKit
 import MessageUI
 
-class ViewController: UIViewController, ARSCNViewDelegate, MFMailComposeViewControllerDelegate {
+class ViewController: UIViewController, ARSCNViewDelegate, SKSceneDelegate, MFMailComposeViewControllerDelegate {
     
     @IBOutlet var sceneView: ARSCNView!
     
