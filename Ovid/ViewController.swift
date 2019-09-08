@@ -12,9 +12,17 @@ import SpriteKit
 import ARKit
 import MessageUI
 
-class ViewController: UIViewController, ARSCNViewDelegate, SKSceneDelegate, MFMailComposeViewControllerDelegate {
+class ViewController: UIViewController, ARSCNViewDelegate, MFMailComposeViewControllerDelegate {
     
     @IBOutlet var sceneView: ARSCNView!
+    
+    @IBOutlet weak var backgroundImageView: UIImageView!
+    
+    @IBAction func logoButton(_ sender: UIButton) {
+        if let url = NSURL(string: "http://www.hubspot.com") {
+            UIApplication.shared.open(url as URL, options: [:], completionHandler: nil)
+        }
+    }
     
     var audioSource = SCNAudioSource(fileNamed: "HubSpot-AboutUs.mp3")!
     
@@ -78,7 +86,7 @@ class ViewController: UIViewController, ARSCNViewDelegate, SKSceneDelegate, MFMa
             
             videoNode.play()
             
-            // the videoNode is a SpriteKit video node and we need to add that to a SceneKit element so we can place the SceneKit element into our Scene View session. To do that, we need to create a new scene:
+            // the videoNode is a SpriteKit video node and we need to add that to a SceneKit element (SCNPlane below) so we can place the SceneKit element into our Scene View session. To do that, we need to create a new scene:
             // the CGSize is an estimation (480p x 360p in resolution)
             let videoScene = SKScene(size: CGSize(width: 480, height: 360))
             
@@ -115,7 +123,7 @@ class ViewController: UIViewController, ARSCNViewDelegate, SKSceneDelegate, MFMa
     
     @IBAction func moreButtonTapped(_ sender: UIBarButtonItem) {
         if let url = NSURL(string: "http://www.hubspot.com") {
-            UIApplication.shared.openURL(url as URL)
+            UIApplication.shared.open(url as URL, options: [:], completionHandler: nil)
         }
     }
     

@@ -21,11 +21,6 @@
                             <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BrB-h1-WRS">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </arscnView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vbt-tW-pgp">
-                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.45085787770000002" green="0.98829740290000001" blue="0.83763033149999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </imageView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qrg-TA-xve">
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
@@ -47,9 +42,20 @@
                                             <action selector="moreButtonTapped:" destination="BV1-FR-VrT" id="0jp-SD-coQ"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem systemItem="pageCurl" id="qLW-Ba-N9a"/>
                                 </items>
                             </toolbar>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hubSpotLogo-Color" translatesAutoresizingMaskIntoConstraints="NO" id="fbO-rr-4yX">
+                                <rect key="frame" x="56" y="461" width="263" height="99"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vv4-5G-Fvn">
+                                <rect key="frame" x="56" y="461" width="263" height="99"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="logoButton:" destination="BV1-FR-VrT" eventType="touchUpInside" id="WGg-TD-cd4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -62,6 +68,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Ovid presents..." id="owz-W0-Mik"/>
                     <connections>
+                        <outlet property="backgroundImageView" destination="fbO-rr-4yX" id="efR-Hq-26e"/>
                         <outlet property="sceneView" destination="BrB-h1-WRS" id="5nT-qQ-ynl"/>
                     </connections>
                 </viewController>
@@ -86,4 +93,7 @@
             <point key="canvasLocation" x="-727" y="27"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="hubSpotLogo-Color" width="442" height="125"/>
+    </resources>
 </document>
