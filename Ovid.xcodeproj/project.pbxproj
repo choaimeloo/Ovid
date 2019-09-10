@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		502F2C1F232530D000E7AA21 /* Mukta-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 502F2C18232530CF00E7AA21 /* Mukta-ExtraLight.ttf */; };
+		502F2C20232530D000E7AA21 /* Mukta-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 502F2C19232530D000E7AA21 /* Mukta-SemiBold.ttf */; };
+		502F2C21232530D000E7AA21 /* Mukta-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 502F2C1A232530D000E7AA21 /* Mukta-Bold.ttf */; };
+		502F2C22232530D000E7AA21 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 502F2C1B232530D000E7AA21 /* OFL.txt */; };
+		502F2C23232530D000E7AA21 /* Mukta-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 502F2C1C232530D000E7AA21 /* Mukta-Light.ttf */; };
+		502F2C24232530D000E7AA21 /* Mukta-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 502F2C1D232530D000E7AA21 /* Mukta-Medium.ttf */; };
+		502F2C25232530D000E7AA21 /* Mukta-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 502F2C1E232530D000E7AA21 /* Mukta-ExtraBold.ttf */; };
+		502F2C26232530FF00E7AA21 /* Mukta-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 502F2C162325232A00E7AA21 /* Mukta-Regular.ttf */; };
 		504EFCF923210E5F00635629 /* HubSpot-AboutUs.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 504EFCF823210E5F00635629 /* HubSpot-AboutUs.mp4 */; };
 		504EFCFB23210E7C00635629 /* HubSpot-AboutUs.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 504EFCFA23210E7C00635629 /* HubSpot-AboutUs.mp3 */; };
 		50B91E56231FE53D00DB0078 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B91E55231FE53D00DB0078 /* AppDelegate.swift */; };
@@ -15,11 +23,17 @@
 		50B91E5D231FE53D00DB0078 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50B91E5B231FE53D00DB0078 /* Main.storyboard */; };
 		50B91E5F231FE53E00DB0078 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50B91E5E231FE53E00DB0078 /* Assets.xcassets */; };
 		50B91E62231FE53E00DB0078 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50B91E60231FE53E00DB0078 /* LaunchScreen.storyboard */; };
-		50B91E6B231FE66000DB0078 /* harrypotter.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 50B91E69231FE65E00DB0078 /* harrypotter.mp3 */; };
-		50B91E6C231FE66000DB0078 /* harrypotter.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 50B91E6A231FE66000DB0078 /* harrypotter.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		502F2C162325232A00E7AA21 /* Mukta-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mukta-Regular.ttf"; sourceTree = "<group>"; };
+		502F2C18232530CF00E7AA21 /* Mukta-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mukta-ExtraLight.ttf"; sourceTree = "<group>"; };
+		502F2C19232530D000E7AA21 /* Mukta-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mukta-SemiBold.ttf"; sourceTree = "<group>"; };
+		502F2C1A232530D000E7AA21 /* Mukta-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mukta-Bold.ttf"; sourceTree = "<group>"; };
+		502F2C1B232530D000E7AA21 /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
+		502F2C1C232530D000E7AA21 /* Mukta-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mukta-Light.ttf"; sourceTree = "<group>"; };
+		502F2C1D232530D000E7AA21 /* Mukta-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mukta-Medium.ttf"; sourceTree = "<group>"; };
+		502F2C1E232530D000E7AA21 /* Mukta-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mukta-ExtraBold.ttf"; sourceTree = "<group>"; };
 		504EFCF823210E5F00635629 /* HubSpot-AboutUs.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HubSpot-AboutUs.mp4"; sourceTree = "<group>"; };
 		504EFCFA23210E7C00635629 /* HubSpot-AboutUs.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "HubSpot-AboutUs.mp3"; sourceTree = "<group>"; };
 		50B91E52231FE53D00DB0078 /* Ovid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ovid.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -30,8 +44,6 @@
 		50B91E5E231FE53E00DB0078 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		50B91E61231FE53E00DB0078 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		50B91E63231FE53E00DB0078 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		50B91E69231FE65E00DB0078 /* harrypotter.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = harrypotter.mp3; sourceTree = "<group>"; };
-		50B91E6A231FE66000DB0078 /* harrypotter.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = harrypotter.mp4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +57,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		502F2C17232530BC00E7AA21 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				502F2C1A232530D000E7AA21 /* Mukta-Bold.ttf */,
+				502F2C1E232530D000E7AA21 /* Mukta-ExtraBold.ttf */,
+				502F2C18232530CF00E7AA21 /* Mukta-ExtraLight.ttf */,
+				502F2C1C232530D000E7AA21 /* Mukta-Light.ttf */,
+				502F2C1D232530D000E7AA21 /* Mukta-Medium.ttf */,
+				502F2C162325232A00E7AA21 /* Mukta-Regular.ttf */,
+				502F2C19232530D000E7AA21 /* Mukta-SemiBold.ttf */,
+				502F2C1B232530D000E7AA21 /* OFL.txt */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		50B91E49231FE53D00DB0078 = {
 			isa = PBXGroup;
 			children = (
@@ -66,8 +93,6 @@
 			children = (
 				504EFCF823210E5F00635629 /* HubSpot-AboutUs.mp4 */,
 				504EFCFA23210E7C00635629 /* HubSpot-AboutUs.mp3 */,
-				50B91E69231FE65E00DB0078 /* harrypotter.mp3 */,
-				50B91E6A231FE66000DB0078 /* harrypotter.mp4 */,
 				50B91E55231FE53D00DB0078 /* AppDelegate.swift */,
 				50B91E57231FE53D00DB0078 /* art.scnassets */,
 				50B91E59231FE53D00DB0078 /* ViewController.swift */,
@@ -75,6 +100,7 @@
 				50B91E5E231FE53E00DB0078 /* Assets.xcassets */,
 				50B91E60231FE53E00DB0078 /* LaunchScreen.storyboard */,
 				50B91E63231FE53E00DB0078 /* Info.plist */,
+				502F2C17232530BC00E7AA21 /* Resources */,
 			);
 			path = Ovid;
 			sourceTree = "<group>";
@@ -137,13 +163,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				502F2C20232530D000E7AA21 /* Mukta-SemiBold.ttf in Resources */,
 				504EFCF923210E5F00635629 /* HubSpot-AboutUs.mp4 in Resources */,
+				502F2C25232530D000E7AA21 /* Mukta-ExtraBold.ttf in Resources */,
 				50B91E58231FE53D00DB0078 /* art.scnassets in Resources */,
+				502F2C1F232530D000E7AA21 /* Mukta-ExtraLight.ttf in Resources */,
 				50B91E62231FE53E00DB0078 /* LaunchScreen.storyboard in Resources */,
-				50B91E6C231FE66000DB0078 /* harrypotter.mp4 in Resources */,
+				502F2C24232530D000E7AA21 /* Mukta-Medium.ttf in Resources */,
 				50B91E5F231FE53E00DB0078 /* Assets.xcassets in Resources */,
+				502F2C22232530D000E7AA21 /* OFL.txt in Resources */,
 				504EFCFB23210E7C00635629 /* HubSpot-AboutUs.mp3 in Resources */,
-				50B91E6B231FE66000DB0078 /* harrypotter.mp3 in Resources */,
+				502F2C23232530D000E7AA21 /* Mukta-Light.ttf in Resources */,
+				502F2C21232530D000E7AA21 /* Mukta-Bold.ttf in Resources */,
+				502F2C26232530FF00E7AA21 /* Mukta-Regular.ttf in Resources */,
 				50B91E5D231FE53D00DB0078 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

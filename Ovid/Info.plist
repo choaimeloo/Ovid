@@ -33,6 +33,16 @@
 	</array>
 	<key>UIStatusBarHidden</key>
 	<true/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Mukta-Regular.ttf</string>
+		<string>Mukta-SemiBold.ttf</string>
+		<string>Mukta-Medium.ttf</string>
+		<string>Mukta-Light.ttf</string>
+		<string>Mukta-ExtraLight.ttf</string>
+		<string>Mukta-ExtraBold.ttf</string>
+		<string>Mukta-Bold.ttf</string>
+	</array>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

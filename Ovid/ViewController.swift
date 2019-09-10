@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  WhereEver
+//  Ovid
 //
 //  Created by Jan Cho on 9/4/19.
 //  Copyright © 2019 Jan Cho. All rights reserved.
@@ -10,19 +10,20 @@ import UIKit
 import SceneKit
 import SpriteKit
 import ARKit
+import AVKit
+import AVFoundation
 import MessageUI
 
 class ViewController: UIViewController, ARSCNViewDelegate, MFMailComposeViewControllerDelegate {
     
     @IBOutlet var sceneView: ARSCNView!
     
-    @IBOutlet weak var backgroundImageView: UIImageView!
+    let videoScene = SKScene(size: CGSize(width: 480, height: 360))
     
-    @IBAction func logoButton(_ sender: UIButton) {
-        if let url = NSURL(string: "http://www.hubspot.com") {
-            UIApplication.shared.open(url as URL, options: [:], completionHandler: nil)
-        }
-    }
+    var player: AVPlayer!
+    
+    var isPlaying: Bool = true
+
     
     var audioSource = SCNAudioSource(fileNamed: "HubSpot-AboutUs.mp3")!
     
@@ -81,14 +82,23 @@ class ViewController: UIViewController, ARSCNViewDelegate, MFMailComposeViewCont
         
         // imageAnchor is the harry potter image on the physical newspaper
         if let imageAnchor = anchor as? ARImageAnchor {
+        
+//            let videoNode = SKVideoNode(fileNamed: "HubSpot-AboutUs.mp4")
+            let videoURL = Bundle.main.url(forResource: "HubSpot-AboutUs.mp4", withExtension: nil)
             
-            let videoNode = SKVideoNode(fileNamed: "HubSpot-AboutUs.mp4")
+            player = AVPlayer(url: videoURL!)
             
-            videoNode.play()
+            videoScene.scaleMode = .aspectFit
+            
+            let videoNode = SKVideoNode(avPlayer: player)
+
+//            videoNode.play()
+            player.play()
+            isPlaying = true
+            
             
             // the videoNode is a SpriteKit video node and we need to add that to a SceneKit element (SCNPlane below) so we can place the SceneKit element into our Scene View session. To do that, we need to create a new scene:
             // the CGSize is an estimation (480p x 360p in resolution)
-            let videoScene = SKScene(size: CGSize(width: 480, height: 360))
             
             // Change videoNode's position relative to its parent. Set parameters to display dead center.
             videoNode.position = CGPoint(x: videoScene.size.width / 2, y: videoScene.size.height / 2)
@@ -119,9 +129,29 @@ class ViewController: UIViewController, ARSCNViewDelegate, MFMailComposeViewCont
         return node
         
     }
+
+    func renderer(_ renderer: SCNSceneRenderer, updateAtTime time: TimeInterval) {
+        if !isPlaying {
+            player.pause()
+        }
+    }
     
     
-    @IBAction func moreButtonTapped(_ sender: UIBarButtonItem) {
+    @IBAction func playPauseTapped(_ sender: UIBarButtonItem) {
+        
+        if isPlaying {
+            player.pause()
+            isPlaying = false
+            
+        } else {
+            player.play()
+            isPlaying = true
+            
+        }
+    }
+    
+    
+    @IBAction func moreInfoTapped(_ sender: UIButton) {
         if let url = NSURL(string: "http://www.hubspot.com") {
             UIApplication.shared.open(url as URL, options: [:], completionHandler: nil)
         }
@@ -143,7 +173,7 @@ class ViewController: UIViewController, ARSCNViewDelegate, MFMailComposeViewCont
         if MFMailComposeViewController.canSendMail() {
             let mail = MFMailComposeViewController()
             mail.mailComposeDelegate = self
-            mail.setToRecipients(["manon@madkings.com"])
+            mail.setToRecipients(["newdeveloper1@maildrop.cc"])
             mail.setSubject("Would love to learn more")
             mail.setMessageBody("<p>You're so awesome! Let's set up a meeting.</p>", isHTML: true)
             
@@ -160,8 +190,6 @@ class ViewController: UIViewController, ARSCNViewDelegate, MFMailComposeViewCont
             self.present(alert, animated: true, completion: nil)
         }
     }
-    
-    
     
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         controller.dismiss(animated: true, completion: nil)
