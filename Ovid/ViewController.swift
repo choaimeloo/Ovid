@@ -56,6 +56,15 @@ class ViewController: UIViewController, ARSCNViewDelegate, MFMailComposeViewCont
             
         }
         
+//        let url = URL(string: "https://hubspot.hubs.vidyard.com/watch/Jgw4cuRZkXyuxZ3hQnoMAv?")
+        
+        // Initialize AVQueuePlayer
+        let url = Bundle.main.url(forResource: "HubSpot-AboutUs.mp4", withExtension: nil)
+        
+        let playerItem: AVPlayerItem = AVPlayerItem(url: url!)
+        
+        player = AVQueuePlayer(playerItem: playerItem)
+        
         // Run the view's session
         sceneView.session.run(configuration)
     }
@@ -78,9 +87,10 @@ class ViewController: UIViewController, ARSCNViewDelegate, MFMailComposeViewCont
         // imageAnchor is the harry potter image on the physical newspaper
         if let imageAnchor = anchor as? ARImageAnchor {
         
-            let videoURL = Bundle.main.url(forResource: "HubSpot-AboutUs.mp4", withExtension: nil)
+//            let videoURL = Bundle.main.url(forResource: "HubSpot-AboutUs.mp4", withExtension: nil)
+//
+//            player = AVQueuePlayer(url: videoURL!)
             
-            player = AVQueuePlayer(url: videoURL!)
             
             let videoNode = SKVideoNode(avPlayer: player)
 
@@ -132,6 +142,7 @@ class ViewController: UIViewController, ARSCNViewDelegate, MFMailComposeViewCont
         
         if isPlaying {
             player.pause()
+//            sender.setBackgroundImage(UIImage(named: "play-pause-circle")!, for: UIControl.State.normal, barMetrics: .default)
             isPlaying = false
             
         } else {
