@@ -20,13 +20,14 @@ class ViewController: UIViewController, ARSCNViewDelegate, MFMailComposeViewCont
     
     let videoScene = SKScene(size: CGSize(width: 480, height: 360))
     
-    var player: AVPlayer!
+    // Contains the virtual object to be placed in the real world
+    let node = SCNNode()
+    
+    var player: AVQueuePlayer!
     
     var isPlaying: Bool = true
 
-    
-    var audioSource = SCNAudioSource(fileNamed: "HubSpot-AboutUs.mp3")!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -35,12 +36,6 @@ class ViewController: UIViewController, ARSCNViewDelegate, MFMailComposeViewCont
         
         // Show statistics such as fps and timing information
         sceneView.showsStatistics = true
-        
-        // Not an environmental sound layer, so audio should stop when done
-        audioSource.loops = false
-        
-        // Decode the audio from the disk ahead of time to prevent a delay in playback
-        audioSource.load()
         
     }
     
@@ -65,11 +60,13 @@ class ViewController: UIViewController, ARSCNViewDelegate, MFMailComposeViewCont
         sceneView.session.run(configuration)
     }
     
+    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
         // Pause the view's session
         sceneView.session.pause()
+        
     }
     
     // MARK: - ARSCNViewDelegate
@@ -77,22 +74,16 @@ class ViewController: UIViewController, ARSCNViewDelegate, MFMailComposeViewCont
     func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
         // the anchor is the image that it found or recognized
         
-        // Contains the virtual object to be placed in the real world
-        let node = SCNNode()
         
         // imageAnchor is the harry potter image on the physical newspaper
         if let imageAnchor = anchor as? ARImageAnchor {
         
-//            let videoNode = SKVideoNode(fileNamed: "HubSpot-AboutUs.mp4")
             let videoURL = Bundle.main.url(forResource: "HubSpot-AboutUs.mp4", withExtension: nil)
             
-            player = AVPlayer(url: videoURL!)
-            
-            videoScene.scaleMode = .aspectFit
+            player = AVQueuePlayer(url: videoURL!)
             
             let videoNode = SKVideoNode(avPlayer: player)
 
-//            videoNode.play()
             player.play()
             isPlaying = true
             
@@ -102,6 +93,8 @@ class ViewController: UIViewController, ARSCNViewDelegate, MFMailComposeViewCont
             
             // Change videoNode's position relative to its parent. Set parameters to display dead center.
             videoNode.position = CGPoint(x: videoScene.size.width / 2, y: videoScene.size.height / 2)
+            
+            videoScene.scaleMode = .aspectFit
             
             // Flip video on the y axis so that it displays right side up
             videoNode.yScale = -1.0
@@ -121,8 +114,6 @@ class ViewController: UIViewController, ARSCNViewDelegate, MFMailComposeViewCont
             planeNode.eulerAngles.x = -.pi / 2
             
             node.addChildNode(planeNode)
-            
-            node.addAudioPlayer(SCNAudioPlayer(source: audioSource))
             
         }
         
@@ -161,9 +152,20 @@ class ViewController: UIViewController, ARSCNViewDelegate, MFMailComposeViewCont
     @IBAction func shareButtonTapped(_ sender: UIBarButtonItem) {
         let items: [Any] = ["You should watch this video:", URL(string: "https://hubspot.hubs.vidyard.com/watch/Jgw4cuRZkXyuxZ3hQnoMAv?")!]
             
-        let ac = UIActivityViewController(activityItems: items, applicationActivities: nil)
+        let activityVC = UIActivityViewController(activityItems: items, applicationActivities: nil)
         
-        present(ac, animated: true)
+        present(activityVC, animated: true)
+        
+        activityVC.completionWithItemsHandler = { (activityType: UIActivity.ActivityType?, completed: Bool, returnedItems: [Any]?, error: Error?) in
+            
+            // Note: behavior of native Messages & Mail apps is different from the other share options. Those two apps do not deallocate (is that the right term?) the current AVPlayer instance and instead create another one "on top" so you have multiple audio streams playing at the same time.
+            if activityType == .message || activityType == .mail {
+                self.player.removeAllItems()
+            } else {
+                self.player.pause()
+            }
+
+        }
         
     }
     
@@ -192,7 +194,12 @@ class ViewController: UIViewController, ARSCNViewDelegate, MFMailComposeViewCont
     }
     
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        
+        player.pause()
+        player.removeAllItems()
+        
         controller.dismiss(animated: true, completion: nil)
+        
     }
     
 }
