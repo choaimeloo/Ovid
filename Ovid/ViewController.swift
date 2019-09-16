@@ -42,24 +42,34 @@ class ViewController: UIViewController, ARSCNViewDelegate, MFMailComposeViewCont
     
     @IBOutlet var sceneView: ARSCNView!
     
+    @IBOutlet weak var slider: UISlider!
+    
+    @IBOutlet weak var playerTimeLabel: UILabel!
+
+    
     let videoScene = SKScene(size: CGSize(width: 480, height: 360))
     
-    // Contains the virtual object to be placed in the real world
+    var configuration = ARImageTrackingConfiguration()
+
     let node = SCNNode()
+    
+    var asset: AVAsset!
+    
+    var videoURL: URL!
     
     var player: AVQueuePlayer!
     
     var playerItem: AVPlayerItem!
     
+    var playerLooper: AVPlayerLooper!
+    
     var isPlaying: Bool = true
     
     var duration: CMTime = CMTime(seconds: 0, preferredTimescale: 100)
     
+    var periodicTimeObserver: Any?
     
-    @IBOutlet weak var slider: UISlider!
-   
-    @IBOutlet weak var playerCurrentTime: UILabel!
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -70,29 +80,20 @@ class ViewController: UIViewController, ARSCNViewDelegate, MFMailComposeViewCont
         // Show statistics such as fps and timing information
         sceneView.showsStatistics = true
         
+//        videoURL = "HubSpot-AboutUs.mp4"
+//        videoURL = URL(string: "https://hubspot.hubs.vidyard.com/watch/Jgw4cuRZkXyuxZ3hQnoMAv?")
+        videoURL = URL(string: "https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4")
         
         // Initialize AVQueuePlayer
-        let url = Bundle.main.url(forResource: "HubSpot-AboutUs.mp4", withExtension: nil)
-        
-        playerItem = AVPlayerItem(url: url!)
-        
-        player = AVQueuePlayer(playerItem: playerItem)
-        
-        
-        // Add time observer
-        player!.addPeriodicTimeObserver(forInterval: CMTime(seconds: 1, preferredTimescale: 100), queue: DispatchQueue.main, using: { (cmtime) in
-//            print(cmtime)
-            
-            self.slider.value = Float(CMTimeGetSeconds(cmtime)) / Float(CMTimeGetSeconds(self.duration))
-            print(self.slider.value)
-            
-            
-//            self.slider.setMinimumTrackImage(<#T##image: UIImage?##UIImage?#>, for: <#T##UIControl.State#>)
-//            self.slider.setMaximumTrackImage(<#T##image: UIImage?##UIImage?#>, for: <#T##UIControl.State#>)
-//            self.slider.minimumValue = / self.duration
-            
-            self.playerCurrentTime.text = "\(cmtime.description) / \(self.duration)"
-            })
+//        let url = Bundle.main.url(forResource: videoURL, withExtension: nil)
+//
+//        asset = AVAsset(url: url!)
+//
+//        playerItem = AVPlayerItem(asset: asset)
+//
+//        player = AVQueuePlayer(playerItem: playerItem)
+
+//        playerLooper = AVPlayerLooper(player: player, templateItem: playerItem)
         
     }
     
@@ -101,7 +102,7 @@ class ViewController: UIViewController, ARSCNViewDelegate, MFMailComposeViewCont
         super.viewWillAppear(animated)
         
         // Create a session configuration
-        let configuration = ARImageTrackingConfiguration()
+        configuration = ARImageTrackingConfiguration()
         
         // Find images to track
         if let imagesToTrack = ARReferenceImage.referenceImages(inGroupNamed: "Cards", bundle: Bundle.main) {
@@ -115,8 +116,7 @@ class ViewController: UIViewController, ARSCNViewDelegate, MFMailComposeViewCont
         
         // Run the view's session
         sceneView.session.run(configuration)
-        
-        //        let url = URL(string: "https://hubspot.hubs.vidyard.com/watch/Jgw4cuRZkXyuxZ3hQnoMAv?")
+//        videoURL = "https://hubspot.hubs.vidyard.com/watch/Jgw4cuRZkXyuxZ3hQnoMAv?"
         
     }
     
@@ -164,10 +164,29 @@ class ViewController: UIViewController, ARSCNViewDelegate, MFMailComposeViewCont
 //            player = AVQueuePlayer(url: videoURL!)
             
             
+//            let url = Bundle.main.url(forResource: videoURL, withExtension: nil)
+            asset = AVAsset(url: videoURL)
+            
+            playerItem = AVPlayerItem(asset: asset)
+            
+            player = AVQueuePlayer(playerItem: playerItem)
+            
+            
             let videoNode = SKVideoNode(avPlayer: player)
 
-            duration = self.player!.currentItem!.asset.duration
-//            print("DURATION: \(duration)")
+            duration = self.player?.currentItem?.asset.duration ?? CMTime(value: 0, timescale: 100)
+            print("DURATION: \(duration)")
+            
+            
+            // Register time observer
+            periodicTimeObserver = player!.addPeriodicTimeObserver(forInterval: CMTime(seconds: 1, preferredTimescale: 100), queue: DispatchQueue.main, using: { (cmtime) in
+                //            print(cmtime)
+
+                self.slider.value = Float(CMTimeGetSeconds(cmtime)) / Float(CMTimeGetSeconds(self.duration))
+                print(self.slider.value)
+
+                self.playerTimeLabel.text = "\(cmtime.description) / \(self.duration)"
+            })
             
             player.play()
             isPlaying = true
@@ -199,6 +218,20 @@ class ViewController: UIViewController, ARSCNViewDelegate, MFMailComposeViewCont
             planeNode.eulerAngles.x = -.pi / 2
             
             node.addChildNode(planeNode)
+            
+            NotificationCenter.default.addObserver(forName: .AVPlayerItemDidPlayToEndTime, object: self.playerItem, queue: nil) { [weak self] _ in
+                self?.playerItem?.seek(to: CMTime.zero, completionHandler: nil)
+                videoNode.removeFromParent()
+                planeNode.removeFromParentNode()
+//                self?.sceneView.session.pause()
+                self?.sceneView.session.run((self?.configuration ?? nil)!, options: [.resetTracking, .removeExistingAnchors])
+//                self?.player.play()
+                
+                //                NotificationCenter.default.addObserver(self, selector: #selector(ViewController.playerItemDidReachEnd), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: player?.currentItem)
+                
+                //                self?.sceneView.session.run(ARImageTrackingConfiguration(), options: .resetTracking)
+                //                self?.sceneView.session.run(ARImageTrackingConfiguration(), options: .removeExistingAnchors)
+            }
             
         }
         

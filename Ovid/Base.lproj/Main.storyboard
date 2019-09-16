@@ -45,7 +45,7 @@
                                 </items>
                             </toolbar>
                             <button opaque="NO" alpha="0.75" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oeG-Oj-7AP">
-                                <rect key="frame" x="136" y="462" width="102" height="50"/>
+                                <rect key="frame" x="138" y="485" width="98" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Learn More"/>
@@ -61,7 +61,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="SV7-ww-jD4">
-                                <rect key="frame" x="92" y="552" width="191" height="30"/>
+                                <rect key="frame" x="59" y="552" width="257" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="sliderValueChanged:" destination="BV1-FR-VrT" eventType="valueChanged" id="spl-Xk-qGN"/>
@@ -79,7 +79,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Ovid presents..." id="owz-W0-Mik"/>
                     <connections>
-                        <outlet property="playerCurrentTime" destination="YNh-wu-StH" id="ilr-1W-txu"/>
+                        <outlet property="playerTimeLabel" destination="YNh-wu-StH" id="ilr-1W-txu"/>
                         <outlet property="sceneView" destination="BrB-h1-WRS" id="5nT-qQ-ynl"/>
                         <outlet property="slider" destination="SV7-ww-jD4" id="Hdl-rf-thi"/>
                     </connections>
