@@ -17,6 +17,9 @@
 		502F2C26232530FF00E7AA21 /* Mukta-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 502F2C162325232A00E7AA21 /* Mukta-Regular.ttf */; };
 		504EFCF923210E5F00635629 /* HubSpot-AboutUs.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 504EFCF823210E5F00635629 /* HubSpot-AboutUs.mp4 */; };
 		504EFCFB23210E7C00635629 /* HubSpot-AboutUs.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 504EFCFA23210E7C00635629 /* HubSpot-AboutUs.mp3 */; };
+		506A5F7D2331239000959646 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506A5F7C2331239000959646 /* RegisterViewController.swift */; };
+		506A5F7F2331247400959646 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506A5F7E2331247400959646 /* LoginViewController.swift */; };
+		506A5F812331249700959646 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506A5F802331249700959646 /* WelcomeViewController.swift */; };
 		50B91E56231FE53D00DB0078 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B91E55231FE53D00DB0078 /* AppDelegate.swift */; };
 		50B91E58231FE53D00DB0078 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 50B91E57231FE53D00DB0078 /* art.scnassets */; };
 		50B91E5A231FE53D00DB0078 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B91E59231FE53D00DB0078 /* ViewController.swift */; };
@@ -36,10 +39,13 @@
 		502F2C1E232530D000E7AA21 /* Mukta-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mukta-ExtraBold.ttf"; sourceTree = "<group>"; };
 		504EFCF823210E5F00635629 /* HubSpot-AboutUs.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HubSpot-AboutUs.mp4"; sourceTree = "<group>"; };
 		504EFCFA23210E7C00635629 /* HubSpot-AboutUs.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "HubSpot-AboutUs.mp3"; sourceTree = "<group>"; };
-		50B91E52231FE53D00DB0078 /* Ovid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ovid.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		50B91E55231FE53D00DB0078 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		506A5F7C2331239000959646 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		506A5F7E2331247400959646 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		506A5F802331249700959646 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		50B91E52231FE53D00DB0078 /* OvidApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OvidApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		50B91E55231FE53D00DB0078 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../AppDelegate.swift; sourceTree = "<group>"; };
 		50B91E57231FE53D00DB0078 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
-		50B91E59231FE53D00DB0078 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		50B91E59231FE53D00DB0078 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../ViewController.swift; sourceTree = "<group>"; };
 		50B91E5C231FE53D00DB0078 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		50B91E5E231FE53E00DB0078 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		50B91E61231FE53E00DB0078 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -72,10 +78,29 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		506A5F7A23311A0A00959646 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				50B91E55231FE53D00DB0078 /* AppDelegate.swift */,
+				50B91E59231FE53D00DB0078 /* ViewController.swift */,
+				506A5F7C2331239000959646 /* RegisterViewController.swift */,
+				506A5F7E2331247400959646 /* LoginViewController.swift */,
+				506A5F802331249700959646 /* WelcomeViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		506A5F7B23311A5000959646 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		50B91E49231FE53D00DB0078 = {
 			isa = PBXGroup;
 			children = (
-				50B91E54231FE53D00DB0078 /* Ovid */,
+				50B91E54231FE53D00DB0078 /* OvidApp */,
 				50B91E53231FE53D00DB0078 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -83,34 +108,34 @@
 		50B91E53231FE53D00DB0078 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				50B91E52231FE53D00DB0078 /* Ovid.app */,
+				50B91E52231FE53D00DB0078 /* OvidApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		50B91E54231FE53D00DB0078 /* Ovid */ = {
+		50B91E54231FE53D00DB0078 /* OvidApp */ = {
 			isa = PBXGroup;
 			children = (
+				50B91E5B231FE53D00DB0078 /* Main.storyboard */,
+				50B91E60231FE53E00DB0078 /* LaunchScreen.storyboard */,
 				504EFCF823210E5F00635629 /* HubSpot-AboutUs.mp4 */,
 				504EFCFA23210E7C00635629 /* HubSpot-AboutUs.mp3 */,
-				50B91E55231FE53D00DB0078 /* AppDelegate.swift */,
+				506A5F7A23311A0A00959646 /* Controller */,
 				50B91E57231FE53D00DB0078 /* art.scnassets */,
-				50B91E59231FE53D00DB0078 /* ViewController.swift */,
-				50B91E5B231FE53D00DB0078 /* Main.storyboard */,
+				506A5F7B23311A5000959646 /* View */,
 				50B91E5E231FE53E00DB0078 /* Assets.xcassets */,
-				50B91E60231FE53E00DB0078 /* LaunchScreen.storyboard */,
 				50B91E63231FE53E00DB0078 /* Info.plist */,
 				502F2C17232530BC00E7AA21 /* Resources */,
 			);
-			path = Ovid;
+			path = OvidApp;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		50B91E51231FE53D00DB0078 /* Ovid */ = {
+		50B91E51231FE53D00DB0078 /* OvidApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 50B91E66231FE53E00DB0078 /* Build configuration list for PBXNativeTarget "Ovid" */;
+			buildConfigurationList = 50B91E66231FE53E00DB0078 /* Build configuration list for PBXNativeTarget "OvidApp" */;
 			buildPhases = (
 				50B91E4E231FE53D00DB0078 /* Sources */,
 				50B91E4F231FE53D00DB0078 /* Frameworks */,
@@ -120,9 +145,9 @@
 			);
 			dependencies = (
 			);
-			name = Ovid;
+			name = OvidApp;
 			productName = WhereEver;
-			productReference = 50B91E52231FE53D00DB0078 /* Ovid.app */;
+			productReference = 50B91E52231FE53D00DB0078 /* OvidApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -140,7 +165,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 50B91E4D231FE53D00DB0078 /* Build configuration list for PBXProject "Ovid" */;
+			buildConfigurationList = 50B91E4D231FE53D00DB0078 /* Build configuration list for PBXProject "OvidApp" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -153,7 +178,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				50B91E51231FE53D00DB0078 /* Ovid */,
+				50B91E51231FE53D00DB0078 /* OvidApp */,
 			);
 		};
 /* End PBXProject section */
@@ -187,6 +212,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				506A5F7F2331247400959646 /* LoginViewController.swift in Sources */,
+				506A5F812331249700959646 /* WelcomeViewController.swift in Sources */,
+				506A5F7D2331239000959646 /* RegisterViewController.swift in Sources */,
 				50B91E5A231FE53D00DB0078 /* ViewController.swift in Sources */,
 				50B91E56231FE53D00DB0078 /* AppDelegate.swift in Sources */,
 			);
@@ -336,13 +364,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K39PD46836;
-				INFOPLIST_FILE = "$(SRCROOT)/Ovid/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/OvidApp/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.janwcho.ovid;
+				PRODUCT_BUNDLE_IDENTIFIER = com.janwcho.ovidapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -355,13 +383,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K39PD46836;
-				INFOPLIST_FILE = "$(SRCROOT)/Ovid/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/OvidApp/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.janwcho.ovid;
+				PRODUCT_BUNDLE_IDENTIFIER = com.janwcho.ovidapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -371,7 +399,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		50B91E4D231FE53D00DB0078 /* Build configuration list for PBXProject "Ovid" */ = {
+		50B91E4D231FE53D00DB0078 /* Build configuration list for PBXProject "OvidApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				50B91E64231FE53E00DB0078 /* Debug */,
@@ -380,7 +408,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		50B91E66231FE53E00DB0078 /* Build configuration list for PBXNativeTarget "Ovid" */ = {
+		50B91E66231FE53E00DB0078 /* Build configuration list for PBXNativeTarget "OvidApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				50B91E67231FE53E00DB0078 /* Debug */,
