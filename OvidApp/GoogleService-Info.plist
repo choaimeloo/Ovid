@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>233428280628-r6u9bg7u6asv8moe8hgd63obdsvul07a.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.233428280628-r6u9bg7u6asv8moe8hgd63obdsvul07a</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAoYZuzHw-3WTAshZooadLJQpvv_uAhRPQ</string>
+	<key>GCM_SENDER_ID</key>
+	<string>233428280628</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.janwcho.ovidapp</string>
+	<key>PROJECT_ID</key>
+	<string>ovidapp-e3b98</string>
+	<key>STORAGE_BUCKET</key>
+	<string>ovidapp-e3b98.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:233428280628:ios:12ce71555ce505e3e87161</string>
+	<key>DATABASE_URL</key>
+	<string>https://ovidapp-e3b98.firebaseio.com</string>
+</dict>
+</plist>

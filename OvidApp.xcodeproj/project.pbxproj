@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C3B944C3D42C805514AEFF0 /* Pods_OvidApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D699B2936C9AC1BED4C20AAE /* Pods_OvidApp.framework */; };
 		502F2C1F232530D000E7AA21 /* Mukta-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 502F2C18232530CF00E7AA21 /* Mukta-ExtraLight.ttf */; };
 		502F2C20232530D000E7AA21 /* Mukta-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 502F2C19232530D000E7AA21 /* Mukta-SemiBold.ttf */; };
 		502F2C21232530D000E7AA21 /* Mukta-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 502F2C1A232530D000E7AA21 /* Mukta-Bold.ttf */; };
@@ -16,10 +17,10 @@
 		502F2C25232530D000E7AA21 /* Mukta-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 502F2C1E232530D000E7AA21 /* Mukta-ExtraBold.ttf */; };
 		502F2C26232530FF00E7AA21 /* Mukta-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 502F2C162325232A00E7AA21 /* Mukta-Regular.ttf */; };
 		504EFCF923210E5F00635629 /* HubSpot-AboutUs.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 504EFCF823210E5F00635629 /* HubSpot-AboutUs.mp4 */; };
-		504EFCFB23210E7C00635629 /* HubSpot-AboutUs.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 504EFCFA23210E7C00635629 /* HubSpot-AboutUs.mp3 */; };
 		506A5F7D2331239000959646 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506A5F7C2331239000959646 /* RegisterViewController.swift */; };
 		506A5F7F2331247400959646 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506A5F7E2331247400959646 /* LoginViewController.swift */; };
 		506A5F812331249700959646 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506A5F802331249700959646 /* WelcomeViewController.swift */; };
+		50A9B63D23323157005C3E0F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 50A9B63C23323157005C3E0F /* GoogleService-Info.plist */; };
 		50B91E56231FE53D00DB0078 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B91E55231FE53D00DB0078 /* AppDelegate.swift */; };
 		50B91E58231FE53D00DB0078 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 50B91E57231FE53D00DB0078 /* art.scnassets */; };
 		50B91E5A231FE53D00DB0078 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B91E59231FE53D00DB0078 /* ViewController.swift */; };
@@ -38,18 +39,21 @@
 		502F2C1D232530D000E7AA21 /* Mukta-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mukta-Medium.ttf"; sourceTree = "<group>"; };
 		502F2C1E232530D000E7AA21 /* Mukta-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mukta-ExtraBold.ttf"; sourceTree = "<group>"; };
 		504EFCF823210E5F00635629 /* HubSpot-AboutUs.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HubSpot-AboutUs.mp4"; sourceTree = "<group>"; };
-		504EFCFA23210E7C00635629 /* HubSpot-AboutUs.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "HubSpot-AboutUs.mp3"; sourceTree = "<group>"; };
 		506A5F7C2331239000959646 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		506A5F7E2331247400959646 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		506A5F802331249700959646 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		50A9B63C23323157005C3E0F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		50B91E52231FE53D00DB0078 /* OvidApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OvidApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50B91E55231FE53D00DB0078 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../AppDelegate.swift; sourceTree = "<group>"; };
 		50B91E57231FE53D00DB0078 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
-		50B91E59231FE53D00DB0078 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../ViewController.swift; sourceTree = "<group>"; };
+		50B91E59231FE53D00DB0078 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		50B91E5C231FE53D00DB0078 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		50B91E5E231FE53E00DB0078 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		50B91E61231FE53E00DB0078 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		50B91E63231FE53E00DB0078 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B0E7AA74443EFEC6B61A3A0 /* Pods-OvidApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OvidApp.release.xcconfig"; path = "Target Support Files/Pods-OvidApp/Pods-OvidApp.release.xcconfig"; sourceTree = "<group>"; };
+		D699B2936C9AC1BED4C20AAE /* Pods_OvidApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OvidApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DDC91BDED8C846FD339EA1D0 /* Pods-OvidApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OvidApp.debug.xcconfig"; path = "Target Support Files/Pods-OvidApp/Pods-OvidApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,12 +61,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C3B944C3D42C805514AEFF0 /* Pods_OvidApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		154748DE8228BA1EF6B0CFBF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DDC91BDED8C846FD339EA1D0 /* Pods-OvidApp.debug.xcconfig */,
+				9B0E7AA74443EFEC6B61A3A0 /* Pods-OvidApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		502F2C17232530BC00E7AA21 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -97,11 +111,20 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		50A9B63E23323176005C3E0F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		50B91E49231FE53D00DB0078 = {
 			isa = PBXGroup;
 			children = (
 				50B91E54231FE53D00DB0078 /* OvidApp */,
 				50B91E53231FE53D00DB0078 /* Products */,
+				154748DE8228BA1EF6B0CFBF /* Pods */,
+				FB46EC0D0CE0229ED1F9B16E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -119,15 +142,24 @@
 				50B91E5B231FE53D00DB0078 /* Main.storyboard */,
 				50B91E60231FE53E00DB0078 /* LaunchScreen.storyboard */,
 				504EFCF823210E5F00635629 /* HubSpot-AboutUs.mp4 */,
-				504EFCFA23210E7C00635629 /* HubSpot-AboutUs.mp3 */,
 				506A5F7A23311A0A00959646 /* Controller */,
 				50B91E57231FE53D00DB0078 /* art.scnassets */,
 				506A5F7B23311A5000959646 /* View */,
 				50B91E5E231FE53E00DB0078 /* Assets.xcassets */,
 				50B91E63231FE53E00DB0078 /* Info.plist */,
+				50A9B63C23323157005C3E0F /* GoogleService-Info.plist */,
+				50A9B63E23323176005C3E0F /* Supporting Files */,
 				502F2C17232530BC00E7AA21 /* Resources */,
 			);
 			path = OvidApp;
+			sourceTree = "<group>";
+		};
+		FB46EC0D0CE0229ED1F9B16E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D699B2936C9AC1BED4C20AAE /* Pods_OvidApp.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,9 +169,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 50B91E66231FE53E00DB0078 /* Build configuration list for PBXNativeTarget "OvidApp" */;
 			buildPhases = (
+				06BD46F6C0B455200A1426AA /* [CP] Check Pods Manifest.lock */,
 				50B91E4E231FE53D00DB0078 /* Sources */,
 				50B91E4F231FE53D00DB0078 /* Frameworks */,
 				50B91E50231FE53D00DB0078 /* Resources */,
+				35AD345EDD5A4D9DE2AEDAC2 /* [CP] Embed Pods Frameworks */,
+				7A7F6EFB3E6AF019C03AB7A6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -195,9 +230,9 @@
 				502F2C1F232530D000E7AA21 /* Mukta-ExtraLight.ttf in Resources */,
 				50B91E62231FE53E00DB0078 /* LaunchScreen.storyboard in Resources */,
 				502F2C24232530D000E7AA21 /* Mukta-Medium.ttf in Resources */,
+				50A9B63D23323157005C3E0F /* GoogleService-Info.plist in Resources */,
 				50B91E5F231FE53E00DB0078 /* Assets.xcassets in Resources */,
 				502F2C22232530D000E7AA21 /* OFL.txt in Resources */,
-				504EFCFB23210E7C00635629 /* HubSpot-AboutUs.mp3 in Resources */,
 				502F2C23232530D000E7AA21 /* Mukta-Light.ttf in Resources */,
 				502F2C21232530D000E7AA21 /* Mukta-Bold.ttf in Resources */,
 				502F2C26232530FF00E7AA21 /* Mukta-Regular.ttf in Resources */,
@@ -206,6 +241,65 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		06BD46F6C0B455200A1426AA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OvidApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		35AD345EDD5A4D9DE2AEDAC2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OvidApp/Pods-OvidApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OvidApp/Pods-OvidApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OvidApp/Pods-OvidApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7A7F6EFB3E6AF019C03AB7A6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OvidApp/Pods-OvidApp-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OvidApp/Pods-OvidApp-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OvidApp/Pods-OvidApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		50B91E4E231FE53D00DB0078 /* Sources */ = {
@@ -360,6 +454,7 @@
 		};
 		50B91E67231FE53E00DB0078 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DDC91BDED8C846FD339EA1D0 /* Pods-OvidApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -379,6 +474,7 @@
 		};
 		50B91E68231FE53E00DB0078 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B0E7AA74443EFEC6B61A3A0 /* Pods-OvidApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
