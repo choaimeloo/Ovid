@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1C3B944C3D42C805514AEFF0 /* Pods_OvidApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D699B2936C9AC1BED4C20AAE /* Pods_OvidApp.framework */; };
+		502602CD2333D4DD002585D7 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 502602CC2333D4DC002585D7 /* Roboto-Medium.ttf */; };
 		502F2C1F232530D000E7AA21 /* Mukta-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 502F2C18232530CF00E7AA21 /* Mukta-ExtraLight.ttf */; };
 		502F2C20232530D000E7AA21 /* Mukta-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 502F2C19232530D000E7AA21 /* Mukta-SemiBold.ttf */; };
 		502F2C21232530D000E7AA21 /* Mukta-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 502F2C1A232530D000E7AA21 /* Mukta-Bold.ttf */; };
@@ -30,6 +31,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		502602CC2333D4DC002585D7 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		502F2C162325232A00E7AA21 /* Mukta-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mukta-Regular.ttf"; sourceTree = "<group>"; };
 		502F2C18232530CF00E7AA21 /* Mukta-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mukta-ExtraLight.ttf"; sourceTree = "<group>"; };
 		502F2C19232530D000E7AA21 /* Mukta-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mukta-SemiBold.ttf"; sourceTree = "<group>"; };
@@ -51,6 +53,7 @@
 		50B91E5E231FE53E00DB0078 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		50B91E61231FE53E00DB0078 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		50B91E63231FE53E00DB0078 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		50CB7CDE2334C8DF0043B793 /* OvidApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OvidApp.entitlements; sourceTree = "<group>"; };
 		9B0E7AA74443EFEC6B61A3A0 /* Pods-OvidApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OvidApp.release.xcconfig"; path = "Target Support Files/Pods-OvidApp/Pods-OvidApp.release.xcconfig"; sourceTree = "<group>"; };
 		D699B2936C9AC1BED4C20AAE /* Pods_OvidApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OvidApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDC91BDED8C846FD339EA1D0 /* Pods-OvidApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OvidApp.debug.xcconfig"; path = "Target Support Files/Pods-OvidApp/Pods-OvidApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -87,6 +90,7 @@
 				502F2C1D232530D000E7AA21 /* Mukta-Medium.ttf */,
 				502F2C162325232A00E7AA21 /* Mukta-Regular.ttf */,
 				502F2C19232530D000E7AA21 /* Mukta-SemiBold.ttf */,
+				502602CC2333D4DC002585D7 /* Roboto-Medium.ttf */,
 				502F2C1B232530D000E7AA21 /* OFL.txt */,
 			);
 			path = Resources;
@@ -139,6 +143,7 @@
 		50B91E54231FE53D00DB0078 /* OvidApp */ = {
 			isa = PBXGroup;
 			children = (
+				50CB7CDE2334C8DF0043B793 /* OvidApp.entitlements */,
 				50B91E5B231FE53D00DB0078 /* Main.storyboard */,
 				50B91E60231FE53E00DB0078 /* LaunchScreen.storyboard */,
 				504EFCF823210E5F00635629 /* HubSpot-AboutUs.mp4 */,
@@ -197,6 +202,11 @@
 				TargetAttributes = {
 					50B91E51231FE53D00DB0078 = {
 						CreatedOnToolsVersion = 10.3;
+						SystemCapabilities = {
+							com.apple.SafariKeychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -228,6 +238,7 @@
 				502F2C25232530D000E7AA21 /* Mukta-ExtraBold.ttf in Resources */,
 				50B91E58231FE53D00DB0078 /* art.scnassets in Resources */,
 				502F2C1F232530D000E7AA21 /* Mukta-ExtraLight.ttf in Resources */,
+				502602CD2333D4DD002585D7 /* Roboto-Medium.ttf in Resources */,
 				50B91E62231FE53E00DB0078 /* LaunchScreen.storyboard in Resources */,
 				502F2C24232530D000E7AA21 /* Mukta-Medium.ttf in Resources */,
 				50A9B63D23323157005C3E0F /* GoogleService-Info.plist in Resources */,
@@ -457,6 +468,7 @@
 			baseConfigurationReference = DDC91BDED8C846FD339EA1D0 /* Pods-OvidApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = OvidApp/OvidApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K39PD46836;
 				INFOPLIST_FILE = "$(SRCROOT)/OvidApp/Info.plist";
@@ -477,6 +489,7 @@
 			baseConfigurationReference = 9B0E7AA74443EFEC6B61A3A0 /* Pods-OvidApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = OvidApp/OvidApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K39PD46836;
 				INFOPLIST_FILE = "$(SRCROOT)/OvidApp/Info.plist";

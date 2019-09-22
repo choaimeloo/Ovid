@@ -16,12 +16,42 @@
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.googleusercontent.apps.233428280628-r6u9bg7u6asv8moe8hgd63obdsvul07a</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.janwcho.ovidapp</string>
+			</array>
+		</dict>
+	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSCameraUsageDescription</key>
 	<string></string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Roboto-Medium.ttf</string>
+		<string>Mukta-Regular.ttf</string>
+		<string>Mukta-SemiBold.ttf</string>
+		<string>Mukta-Medium.ttf</string>
+		<string>Mukta-Light.ttf</string>
+		<string>Mukta-ExtraLight.ttf</string>
+		<string>Mukta-ExtraBold.ttf</string>
+		<string>Mukta-Bold.ttf</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
@@ -33,16 +63,6 @@
 	</array>
 	<key>UIStatusBarHidden</key>
 	<true/>
-	<key>UIAppFonts</key>
-	<array>
-		<string>Mukta-Regular.ttf</string>
-		<string>Mukta-SemiBold.ttf</string>
-		<string>Mukta-Medium.ttf</string>
-		<string>Mukta-Light.ttf</string>
-		<string>Mukta-ExtraLight.ttf</string>
-		<string>Mukta-ExtraBold.ttf</string>
-		<string>Mukta-Bold.ttf</string>
-	</array>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
