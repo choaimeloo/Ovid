@@ -41,14 +41,14 @@
 		502F2C1D232530D000E7AA21 /* Mukta-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mukta-Medium.ttf"; sourceTree = "<group>"; };
 		502F2C1E232530D000E7AA21 /* Mukta-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mukta-ExtraBold.ttf"; sourceTree = "<group>"; };
 		504EFCF823210E5F00635629 /* HubSpot-AboutUs.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HubSpot-AboutUs.mp4"; sourceTree = "<group>"; };
-		506A5F7C2331239000959646 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
-		506A5F7E2331247400959646 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		506A5F802331249700959646 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		506A5F7C2331239000959646 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RegisterViewController.swift; path = Controller/RegisterViewController.swift; sourceTree = "<group>"; };
+		506A5F7E2331247400959646 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Controller/LoginViewController.swift; sourceTree = "<group>"; };
+		506A5F802331249700959646 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WelcomeViewController.swift; path = Controller/WelcomeViewController.swift; sourceTree = "<group>"; };
 		50A9B63C23323157005C3E0F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		50B91E52231FE53D00DB0078 /* OvidApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OvidApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		50B91E55231FE53D00DB0078 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../AppDelegate.swift; sourceTree = "<group>"; };
+		50B91E52231FE53D00DB0078 /* ovidApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ovidApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		50B91E55231FE53D00DB0078 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		50B91E57231FE53D00DB0078 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
-		50B91E59231FE53D00DB0078 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		50B91E59231FE53D00DB0078 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = Controller/ViewController.swift; sourceTree = "<group>"; };
 		50B91E5C231FE53D00DB0078 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		50B91E5E231FE53E00DB0078 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		50B91E61231FE53E00DB0078 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -96,25 +96,6 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		506A5F7A23311A0A00959646 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				50B91E55231FE53D00DB0078 /* AppDelegate.swift */,
-				50B91E59231FE53D00DB0078 /* ViewController.swift */,
-				506A5F7C2331239000959646 /* RegisterViewController.swift */,
-				506A5F7E2331247400959646 /* LoginViewController.swift */,
-				506A5F802331249700959646 /* WelcomeViewController.swift */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		506A5F7B23311A5000959646 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		50A9B63E23323176005C3E0F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -135,7 +116,7 @@
 		50B91E53231FE53D00DB0078 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				50B91E52231FE53D00DB0078 /* OvidApp.app */,
+				50B91E52231FE53D00DB0078 /* ovidApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -147,9 +128,12 @@
 				50B91E5B231FE53D00DB0078 /* Main.storyboard */,
 				50B91E60231FE53E00DB0078 /* LaunchScreen.storyboard */,
 				504EFCF823210E5F00635629 /* HubSpot-AboutUs.mp4 */,
-				506A5F7A23311A0A00959646 /* Controller */,
+				50B91E55231FE53D00DB0078 /* AppDelegate.swift */,
+				50B91E59231FE53D00DB0078 /* ViewController.swift */,
+				506A5F7C2331239000959646 /* RegisterViewController.swift */,
+				506A5F7E2331247400959646 /* LoginViewController.swift */,
+				506A5F802331249700959646 /* WelcomeViewController.swift */,
 				50B91E57231FE53D00DB0078 /* art.scnassets */,
-				506A5F7B23311A5000959646 /* View */,
 				50B91E5E231FE53E00DB0078 /* Assets.xcassets */,
 				50B91E63231FE53E00DB0078 /* Info.plist */,
 				50A9B63C23323157005C3E0F /* GoogleService-Info.plist */,
@@ -187,7 +171,7 @@
 			);
 			name = OvidApp;
 			productName = WhereEver;
-			productReference = 50B91E52231FE53D00DB0078 /* OvidApp.app */;
+			productReference = 50B91E52231FE53D00DB0078 /* ovidApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -478,7 +462,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.janwcho.ovidapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ovidApp;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -499,7 +483,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.janwcho.ovidapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ovidApp;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
